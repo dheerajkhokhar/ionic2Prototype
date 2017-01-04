@@ -1,17 +1,17 @@
 <ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar (click)="gotoHome()" menuClose>
+    <ion-toolbar (click)="onGotoHome()" menuClose>
       <ion-title>Home</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
     <ion-list>
-      <!--<ion-item menu-toggle="left" (click) = "openPage(item)" *ngFor="let item of menuList">
-          <a class="item-content upperCase"><i>&nbsp;</i><span>{{item.name}}</span></a>
-      </ion-item>-->
-     <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+     <button menuClose ion-item *ngFor="let p of pages" (click)="onOpenPage(p)">
         {{p.title}}
+      </button>
+      <button menuClose ion-item (click)="onLogout()">
+        Logout
       </button>
     </ion-list>
   </ion-content>

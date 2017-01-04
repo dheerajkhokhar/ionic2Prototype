@@ -1,27 +1,23 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { Constants } from './app.constant';
+import { SignupModule } from '../pages/signup/signup.module';
+import { Constants, ComponentList } from './app.constant';
 import { MyApp } from './app.component';
-import { HomeController } from '../pages/home/home';
-import { HealthTrackerController } from '../pages/healthTracker/healthTracker';
-import { HeatAlertController } from '../pages/heatAlert/heatAlert';
-import { PerformaceEvalController } from '../pages/performaceEval/performaceEval';
-import { SurveyController } from '../pages/survey/survey';
-import { TipsController } from '../pages/tips/tips';
-import { ProfileSettingController } from '../pages/profileSetting/profileSetting';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomeController,
-    HealthTrackerController,
-    HeatAlertController,
-    PerformaceEvalController,
-    SurveyController,
-    TipsController,
-    ProfileSettingController
+    ComponentList.HomeController,
+    ComponentList.HealthTrackerController,
+    ComponentList.HeatAlertController,
+    ComponentList.PerformaceEvalController,
+    ComponentList.SurveyController,
+    ComponentList.TipsController,
+    ComponentList.ProfileSettingController,
+    ComponentList.LoginController
   ],
   imports: [
+    SignupModule,
     IonicModule.forRoot(MyApp,{
       menuType: Constants.ionicMenuType,
       platforms: {
@@ -30,17 +26,19 @@ import { ProfileSettingController } from '../pages/profileSetting/profileSetting
         }
       }
     })
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomeController,
-    HealthTrackerController,
-    HeatAlertController,
-    PerformaceEvalController,
-    SurveyController,
-    TipsController,
-    ProfileSettingController
+    ComponentList.HomeController,
+    ComponentList.HealthTrackerController,
+    ComponentList.HeatAlertController,
+    ComponentList.PerformaceEvalController,
+    ComponentList.SurveyController,
+    ComponentList.TipsController,
+    ComponentList.ProfileSettingController,
+    ComponentList.LoginController
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
