@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ComponentList } from '../../app/app.constant';
+import { ComponentList } from '../../../app/app.constant';
 
 @Component({
-  selector: 'page-user',
   templateUrl: 'signupPage3.html'
 })
 export class SignupController3 {

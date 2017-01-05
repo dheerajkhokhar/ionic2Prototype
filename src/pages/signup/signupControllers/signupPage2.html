@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+		<ion-title>Personal Information</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="login-page">
+	<form #signupForm="ngForm" novalidate>
+		<ion-list no-lines>
+      <single-select [select-options]="employmentStatusOptions" [select-obj]="'employee'" [select-title]="'Employee'" (singleSelect)="onSingleSelect($event)"></single-select>
+      <multi-select [select-options]="racesOptions" [select-obj]="'race'" [select-title]="'Race'" (multiSelect)="onMultiSelect($event)"></multi-select>
+      <single-select [select-options]="insuranceOptions" [select-obj]="'insurance'" [select-title]="'Insurance'" (singleSelect)="onSingleSelect($event)"></single-select>
+      <single-select [select-options]="educationOptions" [select-obj]="'education'" [select-title]="'Education'" (singleSelect)="onSingleSelect($event)"></single-select>
+		</ion-list>
+		<div padding>
+			<button ion-button (click)="onSignup(signupForm)" type="submit" block>Continue</button>
+		</div>
+	</form>
+</ion-content>

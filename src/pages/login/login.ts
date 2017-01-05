@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
-
-import { NavController } from 'ionic-angular';
-
-import { SignupController } from '../signup/signup';
-import { HomeController } from '../home/home';
+import { Nav } from 'ionic-angular';
+import { ComponentList } from '../../app/app.constant';
 
 
 @Component({
@@ -14,18 +11,18 @@ export class LoginController {
   login: {username?: string, password?: string} = {};
   submitted = false;
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: Nav) { }
 
   onLogin(form) {
     this.submitted = true;
 
     if (form.valid) {
       //this.userData.login(this.login.username);
-      this.navCtrl.setRoot(HomeController);
+      this.navCtrl.setRoot(ComponentList.HomeController);
     }
   }
 
   onSignup() {
-    this.navCtrl.push(SignupController);
+    this.navCtrl.push(ComponentList.SignupController1);
   }
 }

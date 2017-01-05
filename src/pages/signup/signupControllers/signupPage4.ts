@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ComponentList } from '../../app/app.constant';
+import { ComponentList } from '../../../app/app.constant';
 
 @Component({
-  selector: 'page-user',
-  templateUrl: 'signupPage5.html'
+  templateUrl: 'signupPage4.html'
 })
-export class SignupController5 {
+export class SignupController4 {
   signup: {username?: string, password?: string} = {};
   submitted = false;
 
@@ -16,7 +15,7 @@ export class SignupController5 {
     this.submitted = true;
 
     if (form.valid) {
-      this.navCtrl.setRoot(ComponentList.HomeController);
+      this.navCtrl.push(ComponentList.SignupController5);
     }
   }
 }

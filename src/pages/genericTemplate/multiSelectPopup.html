@@ -1,0 +1,10 @@
+<ion-list>
+  <ion-item>
+    <ion-label>{{title}}</ion-label>
+    <ion-select [(ngModel)]="selectedValue" (ionChange)="onClick();" multiple="true">
+      <ion-option [value]="option" *ngFor="let option of optionMultiSelect">{{option.text}}</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+
