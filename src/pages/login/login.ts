@@ -4,10 +4,10 @@ import { ComponentList } from '../../app/app.constant';
 
 
 @Component({
-  selector: 'page-user',
+  selector: 'page-login',
   templateUrl: 'login.html'
 })
-export class LoginController {
+export class LoginPage {
   login: {username?: string, password?: string} = {};
   submitted = false;
 
@@ -18,11 +18,11 @@ export class LoginController {
 
     if (form.valid) {
       //this.userData.login(this.login.username);
-      this.navCtrl.setRoot(ComponentList.HomeController);
+      this.navCtrl.setRoot(ComponentList.HomePage);
     }
   }
 
   onSignup() {
-    this.navCtrl.push(ComponentList.SignupController1);
+    this.navCtrl.push(ComponentList.SignupPage1);
   }
 }

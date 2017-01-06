@@ -8,14 +8,14 @@ import { Kinvey} from 'kinvey-angular2-sdk';
 @NgModule({
   declarations: [
     MyApp,
-    ComponentList.HomeController,
-    ComponentList.HealthTrackerController,
-    ComponentList.HeatAlertController,
-    ComponentList.PerformaceEvalController,
-    ComponentList.SurveyController,
-    ComponentList.TipsController,
-    ComponentList.ProfileSettingController,
-    ComponentList.LoginController
+    ComponentList.HomePage,
+    ComponentList.HealthTrackerPage,
+    ComponentList.HeatAlertPage,
+    ComponentList.PerformaceEvalPage,
+    ComponentList.SurveyPage,
+    ComponentList.TipsPage,
+    ComponentList.ProfileSettingPage,
+    ComponentList.LoginPage
   ],
   imports: [
     SignupModule,
@@ -32,14 +32,14 @@ import { Kinvey} from 'kinvey-angular2-sdk';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ComponentList.HomeController,
-    ComponentList.HealthTrackerController,
-    ComponentList.HeatAlertController,
-    ComponentList.PerformaceEvalController,
-    ComponentList.SurveyController,
-    ComponentList.TipsController,
-    ComponentList.ProfileSettingController,
-    ComponentList.LoginController
+    ComponentList.HomePage,
+    ComponentList.HealthTrackerPage,
+    ComponentList.HeatAlertPage,
+    ComponentList.PerformaceEvalPage,
+    ComponentList.SurveyPage,
+    ComponentList.TipsPage,
+    ComponentList.ProfileSettingPage,
+    ComponentList.LoginPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

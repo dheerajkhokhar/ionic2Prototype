@@ -1,21 +1,24 @@
 import { SignupModule } from '../pages/signup/signup.module';
-import { HomeController } from '../pages/home/home';
-import { HealthTrackerController } from '../pages/healthTracker/healthTracker';
-import { HeatAlertController } from '../pages/heatAlert/heatAlert';
-import { PerformaceEvalController } from '../pages/performaceEval/performaceEval';
-import { SurveyController } from '../pages/survey/survey';
-import { TipsController } from '../pages/tips/tips';
-import { ProfileSettingController } from '../pages/profileSetting/profileSetting';
-import { LoginController } from '../pages/login/login';
-import { SignupController1 } from '../pages/signup/signupControllers/signupPage1';
-import { SignupController2 } from '../pages/signup/signupControllers/signupPage2';
-import { SignupController3 } from '../pages/signup/signupControllers/signupPage3';
-import { SignupController4 } from '../pages/signup/signupControllers/signupPage4';
-import { SignupController5 } from '../pages/signup/signupControllers/signupPage5';
-import { SignupController6 } from '../pages/signup/signupControllers/signupPage6';
 
-import { SingleSelectPopup } from '../pages/genericTemplate/singleSelectPopup';
-import { MultiSelectPopup } from '../pages/genericTemplate/multiSelectPopup';
+
+import { HomePage } from '../pages/home/home';
+import { HealthTrackerPage } from '../pages/health-tracker/health-tracker';
+import { HeatAlertPage } from '../pages/heat-alert/heat-alert';
+import { PerformaceEvalPage } from '../pages/performace-eval/performace-eval';
+import { SurveyPage } from '../pages/survey/survey';
+import { TipsPage } from '../pages/tips/tips';
+import { ProfileSettingPage } from '../pages/profile-setting/profile-setting';
+import { LoginPage } from '../pages/login/login';
+import { SignupPage1 } from '../pages/signup/signup-controllers/signup-page1';
+import { SignupPage2 } from '../pages/signup/signup-controllers/signup-page2';
+import { SignupPage3 } from '../pages/signup/signup-controllers/signup-page3';
+import { SignupPage4 } from '../pages/signup/signup-controllers/signup-page4';
+import { SignupPage5 } from '../pages/signup/signup-controllers/signup-page5';
+import { SignupPage6 } from '../pages/signup/signup-controllers/signup-page6';
+
+
+import { SingleSelectPopupComponent } from '../components/single-select-popup/single-select-popup';
+import { MultiSelectPopupComponent } from '../components/multi-select-popup/multi-select-popup';
 
 
 export const Constants = {
@@ -26,30 +29,30 @@ export const Constants = {
 }
 
 export const MenuList = [
-  { title: "Surveys", component:SurveyController},
-  { title: "Health Tracker", component:HealthTrackerController},
-  { title: "Tips and facts", component:TipsController},
-  { title: "Performance metrics", component:PerformaceEvalController},
-  { title: "Heat Alerts", component:HeatAlertController},
-  { title: "Profile Setting", component:ProfileSettingController}
+  { title: "Surveys", component:SurveyPage},
+  { title: "Health Tracker", component:HealthTrackerPage},
+  { title: "Tips and facts", component:TipsPage},
+  { title: "Performance metrics", component:PerformaceEvalPage},
+  { title: "Heat Alerts", component:HeatAlertPage},
+  { title: "Profile Setting", component:ProfileSettingPage}
 ];
 export const ComponentList={
-  HomeController:HomeController,
-  HealthTrackerController:HealthTrackerController,
-  HeatAlertController:HeatAlertController,
-  PerformaceEvalController:PerformaceEvalController,
-  SurveyController:SurveyController,
-  TipsController:TipsController,
-  ProfileSettingController:ProfileSettingController,
-  LoginController:LoginController,
+  HomePage:HomePage,
+  HealthTrackerPage:HealthTrackerPage,
+  HeatAlertPage:HeatAlertPage,
+  PerformaceEvalPage:PerformaceEvalPage,
+  SurveyPage:SurveyPage,
+  TipsPage:TipsPage,
+  ProfileSettingPage:ProfileSettingPage,
+  LoginPage:LoginPage,
   SignupModule:SignupModule,
-  SignupController1:SignupController1,
-  SignupController2:SignupController2,
-  SignupController3:SignupController3,
-  SignupController4:SignupController4,
-  SignupController5:SignupController5,
-  SignupController6:SignupController6,
-  SingleSelectPopup:SingleSelectPopup,
-  MultiSelectPopup:MultiSelectPopup
+  SignupPage1:SignupPage1,
+  SignupPage2:SignupPage2,
+  SignupPage3:SignupPage3,
+  SignupPage4:SignupPage4,
+  SignupPage5:SignupPage5,
+  SignupPage6:SignupPage6,
+  SingleSelectPopupComponent:SingleSelectPopupComponent,
+  MultiSelectPopupComponent:MultiSelectPopupComponent
 }
 

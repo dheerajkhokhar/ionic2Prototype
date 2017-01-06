@@ -3,8 +3,6 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { MenuList,ComponentList } from './app.constant';
-import { LoginController } from '../pages/login/login';
-import { HomeController } from '../pages/home/home';
 
 @Component({
   templateUrl: 'app.html'
@@ -19,7 +17,7 @@ export class MyApp {
   constructor(public platform: Platform) {
     this.initializeApp(); 
     this.pages = MenuList;
-    this.rootPage = LoginController;
+    this.rootPage = ComponentList.LoginPage;
   }
 
   initializeApp() {
@@ -32,15 +30,15 @@ export class MyApp {
   }
 
   onOpenPage(page) {
-    this.nav.push(page.component);
+    this.nav.setRoot(page.component);
   }
 
   onGotoHome(page){
-    this.nav.push(ComponentList.HomeController);
+    this.nav.setRoot(ComponentList.HomePage);
   }
 
   onLogout(){
-    this.nav.setRoot(ComponentList.LoginController);
+    this.nav.setRoot(ComponentList.LoginPage);
   }
 
 }
