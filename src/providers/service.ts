@@ -15,4 +15,8 @@ export class Service {
     console.log('Hello Service Provider');
   }
 
+  username: string = "John";
+  parameters:{s1?:{},s2?:{},s3?:{},s4?:{},s5?:{},s6?:{}} = {};
+  //signup: {firstname?: string, lastname?: string, email?:string, password?:string,confirmpassword?:string} = {};
+
 }

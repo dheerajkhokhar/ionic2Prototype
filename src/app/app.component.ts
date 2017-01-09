@@ -1,7 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
-import { StatusBar, Splashscreen } from 'ionic-native';
-
+import { StatusBar, Splashscreen, ScreenOrientation } from 'ionic-native';
 import { MenuList,ComponentList } from './app.constant';
 
 @Component({
@@ -24,8 +23,14 @@ export class MyApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      StatusBar.styleDefault();
-      Splashscreen.hide();
+      if(this.platform.is('cordova')){
+        StatusBar.styleDefault();
+        Splashscreen.hide();
+      }
+      console.log(ScreenOrientation.orientation);
+      window.addEventListener("orientationchange", function(){
+        console.log("change");
+      });
     });
   }
 
@@ -35,6 +40,7 @@ export class MyApp {
 
   onGotoHome(page){
     this.nav.setRoot(ComponentList.HomePage);
+    //this.nav.push(ComponentList.HomePage);
   }
 
   onLogout(){

@@ -4,6 +4,7 @@ import { SignupModule } from '../pages/signup/signup.module';
 import { Constants, ComponentList } from './app.constant';
 import { MyApp } from './app.component';
 import { Kinvey} from 'kinvey-angular2-sdk';
+import { Service } from '../providers/service'
 
 @NgModule({
   declarations: [
@@ -41,10 +42,10 @@ import { Kinvey} from 'kinvey-angular2-sdk';
     ComponentList.ProfileSettingPage,
     ComponentList.LoginPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
 })
 export class AppModule {
-  constructor(){
+  constructor(){    
     // Kinvey.init({
     //   apiHostname: 'https://kvy-us2-baas.kinvey.com',
     //   appKey: 'kid_B1XibGkt',

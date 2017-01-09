@@ -9,7 +9,7 @@ export class MultiSelectPopupComponent implements OnInit{
     @Input('select-title') title;
     @Input('select-options') optionMultiSelect;
     @Input('select-obj') selectedObj;
-    private selectedValue = [];
+    @Input('select-model') selectedValue? = []; 
     @Output() multiSelect = new EventEmitter(); 
 
     ngOnInit(){

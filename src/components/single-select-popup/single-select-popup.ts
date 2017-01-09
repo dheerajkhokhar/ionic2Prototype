@@ -9,15 +9,22 @@ export class SingleSelectPopupComponent implements OnInit {
     @Input('select-title') title;
     @Input('select-options') optionSingleSelect;
     @Input('select-obj') selectedObj;
-    private selectedValue = {};
+    @Input('select-model') selectedValue? = {}; 
     @Output() singleSelect = new EventEmitter(); 
 
     ngOnInit(){
       for(let i=0;i<this.optionSingleSelect.length;i++){
-        if(this.optionSingleSelect[i].checked == true){
-          this.selectedValue = this.optionSingleSelect[i];
-          break;          
+        if(this.optionSingleSelect[i].text == this.selectedValue["text"]){
+          {
+            this.selectedValue = this.optionSingleSelect[i];
+            this.optionSingleSelect[i].checked = true;
+            break;    
+          }
         }
+      }
+
+      if(Object.keys(this.selectedValue).length > 0){
+        this.onClick();
       }
     }
 
