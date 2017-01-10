@@ -39,7 +39,7 @@ export class SignupPage1 implements OnInit {
       debugger
       this.events.publish('user:created', this.signup);
 
-      //this.navCtrl.push(ComponentList.SignupPage2,this.signup);
+      this.navCtrl.push(ComponentList.SignupPage2,this.signup);
 
       // let model = this.modelCtrl.create(ComponentList.SignupController2);
       // model.present();

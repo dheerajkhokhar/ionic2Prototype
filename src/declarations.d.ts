@@ -13,3 +13,4 @@
 */
 declare module '*';
 declare const Kinvey: any;
+declare var cordova: any;

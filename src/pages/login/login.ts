@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { ComponentList } from '../../app/app.constant';
-import { AppVersion, Contacts, Camera, Geolocation } from 'ionic-native';
+import { AppVersion, Contacts, Camera, Geolocation, LocationAccuracy } from 'ionic-native';
 
 
 @Component({
@@ -16,7 +16,10 @@ export class LoginPage {
     platform.ready().then(() => {
       console.log("Login Platform");
       //AppVersion.getVersionNumber().then(v => console.log("VERSION",v));
-      Contacts.find(['displayName']).then(contacts => this.contacts = contacts);
+
+      //Contacts.find(['displayName']).then(contacts => this.contacts = contacts);
+
+
       // Camera.getPicture({
       //   sourceType:0
       // }).then((imageData) => {
@@ -29,15 +32,26 @@ export class LoginPage {
       // console.log("error occured");
       // });
 
-      Geolocation.getCurrentPosition().then(pos => console.log('Position'));
+      //Geolocation.getCurrentPosition().then(pos => console.log('Position'));
 
-      Geolocation.getCurrentPosition().then((resp) => {
-        console.log(resp);
-        // resp.coords.latitude
-        // resp.coords.longitude
-      }).catch((error) => {
-        console.log('Error getting location', error);
-      });
+
+      // LocationAccuracy.request(LocationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY).then(
+      // () => {
+      //   console.log('Request successful')
+      //   this.getCoordinate();     
+      // },
+      // error => console.log('Error requesting location permissions', error)
+      // );
+    });
+  }
+
+  getCoordinate(){
+    Geolocation.getCurrentPosition().then((resp) => {
+      console.log(resp);
+      // resp.coords.latitude
+      // resp.coords.longitude
+    }).catch((error) => {
+      console.log('Error getting location', error);
     });
   }
 
