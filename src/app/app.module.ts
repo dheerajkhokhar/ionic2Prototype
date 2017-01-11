@@ -4,7 +4,7 @@ import { SignupModule } from '../pages/signup/signup.module';
 import { Constants, ComponentList } from './app.constant';
 import { MyApp } from './app.component';
 import { Kinvey} from 'kinvey-angular2-sdk';
-import { Service } from '../providers/service'
+import { Service } from '../providers/service';
 
 @NgModule({
   declarations: [

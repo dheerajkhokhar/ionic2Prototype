@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { Service } from '../../providers/service';
 /*
   Generated class for the PerformaceEval page.
 
@@ -13,10 +13,19 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class PerformaceEvalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, public service:Service) {}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PerformaceEvalPage');
+    console.log('ionViewDidLoad PerformaceEvalPage');  
+      this.service.getPosts().subscribe((posts) => {
+      console.log(posts[0].id);
+    },
+    (error) => {
+      console.log(error);
+    },
+    ()=>{
+      console.log("Done");
+    }
+    );
   }
-
 }

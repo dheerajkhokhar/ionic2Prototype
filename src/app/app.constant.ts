@@ -20,7 +20,6 @@ import { SignupPage6 } from '../pages/signup/signup-controllers/signup-page6';
 import { SingleSelectPopupComponent } from '../components/single-select-popup/single-select-popup';
 import { MultiSelectPopupComponent } from '../components/multi-select-popup/multi-select-popup';
 
-
 export const Constants = {
   // Ionic constant variables
   // Menu toggle type (overlay, reveal, push)
